@@ -1,12 +1,8 @@
 #!/bin/bash
 
-aws lambda create-function \
-    --region us-east-1 \
+aws lambda update-function-code \
     --function-name hello-world  \
     --zip-file fileb://hello-world.zip \
-    --role arn:aws:iam::307997508224:role/lambda-kinesis \
-    --handler hello-world.handler \
-    --runtime nodejs4.3 \
     --profile default
 
 # EXAMPLE RESPONSE
